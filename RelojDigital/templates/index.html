@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj Analógico</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="landing-page">
+        <div class="clock-container">
+            <div class="clock">
+                <div class="numbers">
+                    <div class="number" style="transform: rotate(0deg) translate(120px) rotate(0deg);">3</div>
+                    <div class="number" style="transform: rotate(30deg) translate(120px) rotate(-30deg);">4</div>
+                    <div class="number" style="transform: rotate(60deg) translate(120px) rotate(-60deg);">5</div>
+                    <div class="number" style="transform: rotate(90deg) translate(120px) rotate(-90deg);">6</div>
+                    <div class="number" style="transform: rotate(120deg) translate(120px) rotate(-120deg);">7</div>
+                    <div class="number" style="transform: rotate(150deg) translate(120px) rotate(-150deg);">8</div>
+                    <div class="number" style="transform: rotate(180deg) translate(120px) rotate(-180deg);">9</div>
+                    <div class="number" style="transform: rotate(210deg) translate(120px) rotate(-210deg);">10</div>
+                    <div class="number" style="transform: rotate(240deg) translate(120px) rotate(-240deg);">11</div>
+                    <div class="number" style="transform: rotate(270deg) translate(120px) rotate(-270deg);">12</div>
+                    <div class="number" style="transform: rotate(300deg) translate(120px) rotate(-300deg);">1</div>
+                    <div class="number" style="transform: rotate(330deg) translate(120px) rotate(-330deg);">2</div>
+                </div>
+                <div class="date-container">
+                    <p id="current-date"></p>
+                </div>
+                <div class="hour-hand"></div>
+                <div class="minute-hand"></div>
+                <div class="second-hand"></div>
+                <div class="ticks">
+                    {% for i in range(60) %}
+                    <div class="tick" style="transform: rotate({{ i * 6 }}deg);">
+                        <div class="line {{ 'hour-tick' if i % 5 == 0 else 'minute-tick' }}"></div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

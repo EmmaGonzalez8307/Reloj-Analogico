@@ -1,0 +1,134 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2c3e50;
+    background-image: url('1.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.landing-page {
+    text-align: center;
+}
+
+.clock-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+.clock {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 10px solid #f39c12;
+    border-radius: 50%;
+    background: #ecf0f1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.hour-hand,
+.minute-hand,
+.second-hand {
+    height: 4px;
+    background: black;
+    top: 50%;
+    left: 10%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    border-radius: 2px;
+}
+
+.second-hand {
+    background: red;
+    height: 2px;
+    position: absolute;
+    width: 40%;
+}
+
+.minute-hand {
+    height: 3px;
+    position: absolute;
+    width: 100px;
+    left: 17%;
+    
+}
+
+.hour-hand {
+    height: 3px;
+    width: 75px;
+    position: absolute;
+    left: 25%;
+}
+
+
+.ticks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.tick {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+}
+
+.line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: black;
+    height: 10px;
+}
+
+.hour-tick {
+    height: 15px;
+    width: 3px;
+}
+
+.minute-tick {
+    background: #bdc3c7;
+}
+
+.numbers {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.number {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    width: 30px; 
+    height: 30px;
+}
+
+.date-container {
+    text-align: center;
+    margin-top: 110%;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    font-family: Arial, sans-serif;
+}
